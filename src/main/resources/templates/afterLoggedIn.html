@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<head>
+		<!-- meta -->
+		<div th:replace="~{fragment::meta}"></div>
+		
+		<!-- style -->
+		<div th:replace="~{fragment::styles}"></div>
+		
+		<title>ようこそ</title>
+	</head>
+	<body>
+		<div>
+			<!-- ヘッダー -->
+						
+			<!-- main -->
+			<main>
+				<div>
+					<div>
+						<h1>ようこそ！</h1>					
+						<h2>どちらでのご利用ですか？</h2>
+					</div>
+					
+					<div>
+						<button type="button" href="#">
+						企業管理者
+						</button>
+						<button href="#">
+						従業員
+						</button>
+					</div>							
+				</div>
+			</main>
+			
+			<!-- フッター -->
+			<div th:replace="~{fragment::footer}"></div>
+		</div>		
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- / -->
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<head>
+		<!-- meta -->
+		<div th:replace="~{fragment::meta}"></div>
+		
+		<!-- style -->
+		<div th:replace="~{fragment::styles}"></div>
+		
+		<title>ログイン</title>
+	</head>
+	<body>
+		<div>
+			<!-- ヘッダー -->
+						
+			<!-- main -->
+			<main>
+				<div>					
+					<h2>ログイン</h2>	
+					
+					<div th:if="${param.error}">
+						メールアドレスまたはパスワードが正しくありません
+					</div>
+															
+					<form th:action="@{/login}" method="post">
+						<div>
+							<input type="text" name="username" placeholder="メールアドレス" autofocus>
+						</div>
+						
+						<div>
+							<input type="password" name="password" placeholder="パスワード">
+						</div>
+						
+						<div>
+							<button type="submit">ログイン</button>
+						</div>
+					</form>					
+				</div>
+			</main>
+			
+			<!-- フッター -->
+			<div th:replace="~{fragment::footer}"></div>
+		</div>		
+	</body>
+</html>

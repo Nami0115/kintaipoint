@@ -1,0 +1,35 @@
+<!-- employee/index -->
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<head>
+		<!-- meta -->
+		<div th:replace="~{fragment::meta}"></div>
+		
+		<!-- style -->
+		<div th:replace="~{fragment::styles}"></div>
+		
+		<title>トップページ</title>
+	</head>
+	<body>
+		<div>
+			<!-- ヘッダー -->
+						
+			<!-- main -->
+			<main>
+				<div>			
+					<div>
+						<button type="button" href="#">
+						勤怠連絡
+						</button>
+						<button href="#">
+						アカウント詳細
+						</button>
+					</div>							
+				</div>
+			</main>
+			
+			<!-- フッター -->
+			<div th:replace="~{fragment::footer}"></div>
+		</div>		
+	</body>
+</html>
