@@ -30,7 +30,7 @@ public class UserDetailsImpl implements UserDetails {
 	//ログイン時に利用するユーザー名（メールアドレス）を返す
 	@Override
 	public String getUsername() {
-		return user.getEmail();		
+		return user.getEmail();
 	}
 	
 	//ロールのコレクションを返す

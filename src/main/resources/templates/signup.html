@@ -1,0 +1,100 @@
+<!-- 会員登録機能 -->
+<!-- /signup -->
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<head>
+		<!-- meta -->
+		<div th:replace="~{fragment::meta}"></div>
+		
+		<!-- style -->
+		<div th:replace="~{fragment::styles}"></div>
+	
+		<title>会員登録</title>
+	</head>	
+	<body>
+		<div>						
+			<!-- main -->
+			<main>				
+				<div>
+					<h2>会員登録</h2>
+					
+					<form th:action="@{/signup}" method="post" th:object="${SignupForm}">
+						<div>
+							<div>
+								<span>氏名</span>
+								<span>必須</span>
+							</div>
+							<div>
+								<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+								<input type="text" th:field="*{name}" autofocus placeholder="氏名">
+							</div>
+						</div>
+						
+						<div>
+							<div>
+								<span>電話番号</span>
+								<span>必須</span>
+							</div>
+							<div>
+								<div th:if="${#fields.hasErrors('telephone')}" th:errors="*{telephone}"></div>
+								<input type="text" th:field="*{telephone}" placeholder="電話番号">
+							</div>
+						</div>
+						
+						<div>
+							<div>
+								<span>緊急連絡先</span>
+								<span>必須</span>
+							</div>
+							<div>
+								<div th:if="${#fields.hasErrors('emergencyContact')}" th:errors="*{emergencyContact}"></div>
+								<input type="text" th:field="*{emergencyContact}" placeholder="緊急連絡先">
+							</div>
+						</div>
+						
+						<div>
+							<div>
+								<span>メールアドレス</span>
+								<span>必須</span>
+							</div>
+							<div>
+								<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+								<input type="text" th:field="*{email}" placeholder="メールアドレス">
+							</div>
+						</div>
+						
+						<div>
+							<div>
+								<span>パスワード</span>
+								<span>必須</span>
+							</div>
+							<div>
+								<div th:if="${#fields.hasErrors('password')}" th:errors="*[password]"></div>
+								<input type="password" th:field="*{password}" placeholder="パスワード">
+							</div>
+						</div>
+						
+						<div>
+							<div>
+								<span>パスワード（確認用）</span>
+								<span>必須</span>
+							</div>
+							<div>
+								<div th:if="${#fields.hasErrors('passwordConfirmation')}" th:errors="*{passwordConfirmation}"></div>
+								<input type="password" th:field="*{passwordConfirmation}" placeholder="パスワード（確認用）">
+							</div>
+						</div>
+						
+						<div>
+							<button type="submit">登録</button>
+						</div>
+					</form>					
+				</div>
+			</main>			
+		</div>
+		
+		<!-- script -->
+		<div th:replace="~{fragment::scripts}"></div>
+		
+	</body>
+</html>

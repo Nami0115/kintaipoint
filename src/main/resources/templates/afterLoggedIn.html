@@ -12,7 +12,8 @@
 	<body>
 		<div>
 			<!-- ヘッダー -->
-						
+			<div th:replace="~fragment::header"></div>
+			
 			<!-- main -->
 			<main>
 				<div>
@@ -34,6 +35,9 @@
 			
 			<!-- フッター -->
 			<div th:replace="~{fragment::footer}"></div>
+			
+			<!-- script -->
+			<div th:replace="~{fragment::scripts}"></div>
 		</div>		
 	</body>
 </html>

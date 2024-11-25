@@ -18,7 +18,7 @@ public class WebSecurityConfig {
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
 			.authorizeHttpRequests((requests) -> requests
-				.requestMatchers("/login").permitAll()			
+				.requestMatchers("/login", "/signup").permitAll()			
 				.anyRequest().authenticated()
 			)
 			.formLogin((form) -> form
@@ -29,7 +29,7 @@ public class WebSecurityConfig {
 				.permitAll()
 			)
 			.logout((logout) -> logout
-				.logoutSuccessUrl("/login")
+				.logoutSuccessUrl("/logout")
 				.permitAll()
 			);
 			
@@ -39,5 +39,5 @@ public class WebSecurityConfig {
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
-	}
+	}	
 }

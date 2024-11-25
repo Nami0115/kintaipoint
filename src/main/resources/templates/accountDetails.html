@@ -1,0 +1,76 @@
+<!-- accountDetails -->
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<head>
+		<!-- meta -->
+		<div th:replace="~{fragment::meta}"></div>
+		
+		<!-- style -->
+		<div th:replace="~{fragment::styles}"></div>
+		
+		<title>アカウント詳細</title>
+	</head>
+	<body>
+		<div>
+			<!-- ヘッダー -->
+			<div th:replace="~fragment::header"></div>
+			
+			<!-- main -->
+			<main>
+				<div>
+					<h1>アカウント詳細</h1>
+					
+					<div>
+						<a href="/user/edit">編集</a>
+					</div>
+					
+					<div th:if="${successMessage}">
+						<span th:text="${successMessage}"></span>
+					</div>
+					
+					<div>
+						<div>
+							<span>氏名</span>
+						</div>
+						<div>
+							<span th:text="${user.getName()}"></span>
+						</div>
+					</div>
+					
+					<div>
+						<div>
+							<span>電話番号</span>
+						</div>
+						<div>
+							<span th:text="${user.getTelephone()}"></span>
+						</div>
+					</div>
+					
+					<div>
+						<div>
+							<span>緊急連絡先</span>
+						</div>
+						<div>
+							<span th:text="${user.getEmergencyContact()}"></span>
+						</div>
+					</div>
+					
+					<div>
+						<div>
+							<span>メールアドレス</span>
+						</div>
+						<div>
+							<span th:text="${user.getEmail()}"></span>
+						</div>
+					</div>											
+				</div>
+			</main>
+			
+			<!-- フッター -->
+			<div th:replace="~{fragment::footer}"></div>
+			
+			<!-- script -->
+			<div th:replace="~{fragment::scripts}"></div>
+		</div>		
+	</body>
+</html>
