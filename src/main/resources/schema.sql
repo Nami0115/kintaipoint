@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS users (
 	telephone VARCHAR(50) NOT NULL,
 	emergency_contact VARCHAR(50) NOT NULL,	
 	email VARCHAR(255) NOT NULL UNIQUE,
-	password VARCHAR(50) NOT NULL,
+	password VARCHAR(255) NOT NULL,
 	role_id INT NOT NULL,
 	company_id INT NOT NULL,
 	company_name VARCHAR(255) NOT NULL,
