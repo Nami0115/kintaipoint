@@ -12,8 +12,10 @@
 		<title>会員登録</title>
 	</head>	
 	<body>
-		<div>						
-			<!-- main -->
+		<div>
+			<!-- ヘッダー -->
+			<div th:replace="~fragment::header"></div>					
+			
 			<main>				
 				<div>
 					<h2>会員登録</h2>
@@ -90,11 +92,14 @@
 						</div>
 					</form>					
 				</div>
-			</main>			
-		</div>
-		
-		<!-- script -->
-		<div th:replace="~{fragment::scripts}"></div>
-		
+			</main>	
+			
+			<!-- フッター -->
+			<div th:replace="~{fragment::footer}"></div>
+			
+			<!-- script -->
+			<div th:replace="~{fragment::scripts}"></div>
+					
+		</div>		
 	</body>
 </html>

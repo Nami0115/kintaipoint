@@ -1,4 +1,4 @@
-<!-- employee/attendance -->
+<!-- employee/accountDetails -->
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 	<head>
@@ -8,23 +8,23 @@
 		<!-- style -->
 		<div th:replace="~{fragment::styles}"></div>
 		
-		<title>勤怠連絡</title>
+		<title>アカウント詳細</title>
 	</head>
 	<body>
 		<div>
 			<!-- ヘッダー -->
 			<div th:replace="~fragment::header"></div>
-			
+				
 			<!-- main -->
 			<main>
 				<div>			
 					<div>
-						<h1>勤怠連絡</h1>
+						<h1>アカウント詳細</h1>
 					</div>
 					
-					<form>
-					
-					</form>						
+					<table>
+						<!-- アカウント詳細 -->
+					</table>					
 				</div>
 			</main>
 			
@@ -33,7 +33,6 @@
 			
 			<!-- script -->
 			<div th:replace="~{fragment::scripts}"></div>
-			
 		</div>		
 	</body>
 </html>

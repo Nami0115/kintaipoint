@@ -18,8 +18,7 @@ public class UserService {
 		this.userRepository = userRepository;		
 		this.passwordEncoder = passwordEncoder;
 	}
-	
-	//会員登録機能
+		
 	@Transactional
 	public User create(SignupForm signupForm) {
 		User user = new User();
@@ -32,8 +31,7 @@ public class UserService {
 		
 		return userRepository.save(user);
 	}
-	
-	//会員登録機能
+		
 	public boolean isSamePassword(String password, String passwordConfirmation) {
 		return password.equals(passwordConfirmation);
 	}

@@ -44,8 +44,6 @@ public class User {
 	@JoinColumn(name = "company_id")
 	private Company companyId;
 	
-	// @ManyToOne
-	// @JoinColumn(name = "company_name")
 	private String companyName;
 	
     @Column(name = "created_at", insertable = false, updatable = false)

@@ -1,4 +1,3 @@
-<!-- employee/attendance -->
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 	<head>
@@ -8,32 +7,20 @@
 		<!-- style -->
 		<div th:replace="~{fragment::styles}"></div>
 		
-		<title>勤怠連絡</title>
+		<title>アカウント情報</title>
 	</head>
 	<body>
 		<div>
 			<!-- ヘッダー -->
-			<div th:replace="~fragment::header"></div>
+			<div th:replace="~{fragment::header}"></div>
 			
 			<!-- main -->
 			<main>
-				<div>			
-					<div>
-						<h1>勤怠連絡</h1>
-					</div>
-					
-					<form>
-					
-					</form>						
-				</div>
+				<p>企業のアカウント情報</p>
 			</main>
 			
 			<!-- フッター -->
 			<div th:replace="~{fragment::footer}"></div>
-			
-			<!-- script -->
-			<div th:replace="~{fragment::scripts}"></div>
-			
-		</div>		
+		</div>
 	</body>
 </html>

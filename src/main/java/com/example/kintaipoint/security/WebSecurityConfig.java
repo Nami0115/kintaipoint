@@ -18,18 +18,19 @@ public class WebSecurityConfig {
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
 			.authorizeHttpRequests((requests) -> requests
-				.requestMatchers("/login", "/signup").permitAll()			
+				.requestMatchers("/").permitAll()
+				.requestMatchers("/companyAdmin/**").hasRole("companyAdmin")
 				.anyRequest().authenticated()
 			)
 			.formLogin((form) -> form
 				.loginPage("/login")
 				.loginProcessingUrl("/login")
-				.defaultSuccessUrl("/loggedIn")
+				.defaultSuccessUrl("/?loggedIn")
 				.failureUrl("/login?error")
 				.permitAll()
 			)
 			.logout((logout) -> logout
-				.logoutSuccessUrl("/logout")
+				.logoutSuccessUrl("/?loggedOut")
 				.permitAll()
 			);
 			

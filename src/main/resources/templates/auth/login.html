@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 	<head>
-		<!-- meta -->
-		<div th:replace="~{fragment::meta}"></div>
 		
-		<!-- style -->
-		<div th:replace="~{fragment::styles}"></div>
 		
 		<title>ログイン</title>
 	</head>
 	<body>
 		<div>						
-			<!-- main -->
+			<!-- ヘッダー -->
+			<div th:replace="~{fragment::header}"></div>
+			
 			<main>				
 				<div>					
 					<h2>ログイン</h2>	
@@ -33,24 +31,10 @@
 							<button type="submit">ログイン</button>
 						</div>
 					</form>
-					
-					<!-- 会員登録機能 -->
-					<div>
-						<a th:href="@{/signup}">
-							会員登録
-						</a>
-					</div>
-					
-					<!-- 会員登録機能 -->
-					<div th:if="${successMessage}">
-						<span th:text="${successMessage}"></span>
-					</div>			
 				</div>
 			</main>
-		</div>
+					
 			
-		<!-- script -->
-		<div th:replace="~{fragment::scripts}"></div>
-			
+		</div>			
 	</body>
 </html>
